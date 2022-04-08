@@ -1,8 +1,23 @@
+import Footer from '../components/footer';
+import Counter from '../components/counter';
+import { useNavigate } from "react-router-dom";
+
 function HelloWorld(){
+
+    const navigate = useNavigate();
+
+    const goToMain = () => {
+        navigate("/");
+        // window.location.href = '/helloWorld';
+    }
+
     return (
-        <div>
+        <>
             <p>Hail UWU</p>
-        </div>
+            <Counter />
+            <Footer />
+            <button onClick={goToMain}>Go to Main</button>
+        </>
     );
 }
 
